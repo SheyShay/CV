@@ -1,0 +1,234 @@
+body {
+  background: url(images/fond_ecran.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.category-cv {
+  border: solid 1px rgb(5, 43, 148);
+  background-color: rgb(128, 127, 127);
+  color: black;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 5px;
+}
+#img-form {
+  width: 20px;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.clear {
+  clear: both;
+  height: 0px !important;
+}
+
+/* --------------------------------- SCROLL BAR ---------------------------------- */
+
+body::-webkit-scrollbar-track
+{
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar
+{
+  width: 13px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+                     left bottom,
+                     left top,
+                     color-stop(0.32, rgb(29, 98, 119)),
+                     color-stop(0.72, rgb(28,58,148)),
+                     color-stop(0.86, rgb(3, 21, 75)));
+}
+/* --------------------------------- EFFET CLICK ---------------------------------- */
+
+.clickAnim{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #a09e9e, #2f3133);
+  position: absolute;
+  z-index: 9000;
+  transform: scale(0);
+  transform-origin: center;
+  animation: clickAnim 1s ease-in-out;
+}
+
+@keyframes clickAnim{
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------- HEADER ---------------------------------- */
+#identity {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#phot{
+    background-image: url(images/David.jpg);
+    width: 156px;
+    height: 156px;
+    border-radius: 100px;
+    border: solid 2px rgb(1, 164, 175);
+    filter: drop-shadow(0 0 0.75rem rgb(10, 9, 9));
+}
+#photo {
+  background-image: url(images/David.jpg);
+  background-size: cover;
+  width: 156px;
+  height: 156px;
+  border-radius: 100px;
+  border: solid 2px rgb(1, 164, 175);
+  filter: drop-shadow(0 0 0.75rem rgb(10, 9, 9));
+}
+@media (max-width: 850px) {
+  #photo {
+    background-image: url(images/brad\ pitt.jpg);
+    background-size: cover;
+    width: 156px;
+    height: 156px;
+    border-radius: 50px;
+    border: solid 2px rgb(1, 164, 175);
+    filter: drop-shadow(0 0 0.75rem rgb(10, 9, 9));
+  }
+}
+
+#coordonees h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ----------------------- BUTTON ---------------- */
+button{
+  margin-left: 90px;
+  margin-top: 7px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+  transition: all 0.2s;
+}
+button::after{
+  content: "";
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  z-index: -1;
+  transition: all .5s;
+}
+button:hover::after{
+  transform: rotate(150deg);
+}
+button:hover{
+  transform: translate(0, -2px);
+}
+
+@media (max-width: 850px) {
+  button {
+    margin-left: 35px;
+    text-align: center;
+    color: white;
+  }
+}
+
+#info {
+  text-align: right;
+  color: white;
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+@media (max-width: 850px) {
+  #info {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
+
+/* --------------------------------- CORPS CV ---------------------------------- */
+
+.title-formation {
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(245, 245, 245) 0.5px -1px 5px;
+  font-size: 1.22em;
+}
+
+.main-formation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 20px 20px;
+}
+.block-formation {
+  border-radius: 15px;
+  background: rgb(66, 64, 64);
+  width: 500px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* --------------------------------- COMPETENCES ---------------------------------- */
+
+.block-competence {
+  text-align: left;
+  width: 500px;
+}
+
+.main-competence {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: -40px -40px;
+  background: rgb(66, 64, 64);
+  border-radius: 15px;
+}
+
+@media (max-width: 850px) {
+  .main-competence {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: -40px -40px;
+    background: rgb(66, 64, 64);
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
